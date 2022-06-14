@@ -15,7 +15,7 @@ notesCtrl.createNote = async (req, res) => {
     phoneNumber,
   });
   await newNote.save();
-  res.json("New note added");
+  res.json("New contact card added");
 };
 
 notesCtrl.getNote = async (req, res) => {
@@ -25,7 +25,7 @@ notesCtrl.getNote = async (req, res) => {
 
 notesCtrl.deleteNote = async (req, res) => {
   await Note.findByIdAndDelete(req.params.id);
-  res.json("Note was deleted.");
+  res.json("Contact card was deleted.");
 };
 
 module.exports = notesCtrl;
