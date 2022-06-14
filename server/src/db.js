@@ -6,10 +6,7 @@ const URI = process.env.MONGODB_CONNECTION
   ? process.env.MONGODB_CONNECTION
   : "mongodb://localhost/mylocaldatabase";
 
-mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-});
+mongoose.connect(URI);
 
 const connection = mongoose.connection;
 
