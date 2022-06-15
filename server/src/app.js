@@ -7,6 +7,6 @@ app.set("port", 4000);
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/notes", require("./routes/notes"));
+app.use("/api/contacts", require("./routes/contacts"));
 
 module.exports = app;
