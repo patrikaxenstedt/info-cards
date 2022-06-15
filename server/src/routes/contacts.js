@@ -2,10 +2,6 @@ const { Router } = require("express");
 const router = Router();
 
 const {
-  getNotes,
-  createNote,
-  getNote,
-  deleteNote,
   getContacts,
   createContact,
   getContact,
