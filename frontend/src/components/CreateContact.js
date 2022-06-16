@@ -30,49 +30,49 @@ export default class CreateContact extends Component {
 
   render() {
     return (
-      <div className="col-md-4 mt-4">
-        <div className="card card-body">
-          <h4>Create new</h4>
-          <form onSubmit={this.onSubmit}>
-            {/* Add firstname */}
-            <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="First name"
-                onChange={this.onInputChange}
-                name="firstName"
-                value={this.state.firstName}
-                required
-              />
-            </div>
-            {/* Add lastname */}
-            <div className="form-group">
-              <textarea
-                type="text"
-                className="form-control"
-                placeholder="Last name"
-                name="lastName"
-                onChange={this.onInputChange}
-                value={this.state.lastName}
-                required
-              ></textarea>
-            </div>
-            {/* Add phone number */}
-            <div className="form-group">
-              <textarea
-                type="number"
-                className="form-control"
-                placeholder="Phone number"
-                name="phoneNumber"
-                onChange={this.onInputChange}
-                value={this.state.phoneNumber}
-                required
-              ></textarea>
-            </div>
-            <button className="btn btn-primary">Add new</button>
-          </form>
-        </div>
+      <div className="sm:max-w-l w-full p-3">
+        <h1 className="pt-12">Create new</h1>
+        <form class="pt-24" onSubmit={this.onSubmit}>
+          <div class="mb-4">
+            <input
+              type="text"
+              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
+              placeholder="First name"
+              onChange={this.onInputChange}
+              name="firstName"
+              value={this.state.firstName}
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="text"
+              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
+              placeholder="Last name"
+              onChange={this.onInputChange}
+              name="lastName"
+              value={this.state.lastName}
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="number"
+              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
+              placeholder="Phone number"
+              name="phoneNumber"
+              onChange={this.onInputChange}
+              value={this.state.phoneNumber}
+              required
+            />
+          </div>
+          <div>
+            <button className="bg-[#04cccc] text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+              Add new
+            </button>
+          </div>
+        </form>
       </div>
     );
   }
