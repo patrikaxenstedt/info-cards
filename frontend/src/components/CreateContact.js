@@ -59,7 +59,7 @@ export default class CreateContact extends Component {
           <div className="mb-4">
             <input
               type="number"
-              pattern="[789][0-9]{9}"
+              pattern="[0-9]{3}/[0-9]{3}/[0-9]{2}/[0-9]{2}"
               className="form-cshadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
               placeholder="Phone number"
               name="phoneNumber"

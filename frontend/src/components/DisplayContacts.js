@@ -22,6 +22,12 @@ export default class DisplayContacts extends Component {
     this.getContacts();
   };
 
+  /*   numberWithSpaces = async (value, pattern) => {
+    let i = 0,
+      phoneNumber = value.toString();
+    return pattern.replace(/#/g, (_) => phoneNumber[i++]);
+  }; */
+
   render() {
     return (
       <div className="sm:max-w-l w-full p-3">
@@ -56,7 +62,10 @@ export default class DisplayContacts extends Component {
                       Phone number
                     </h5>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      {contact.phoneNumber}
+                      {contact.phoneNumber.replace(
+                        /(\d{3})(\d{3})(\d{2})(\d{2})/,
+                        "$1 $2 $3 $4"
+                      )}
                     </p>
                   </div>
                 </div>
