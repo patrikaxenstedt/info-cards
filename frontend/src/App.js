@@ -6,7 +6,7 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <div class="container mx-auto">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
           <CreateContact />
           <DisplayContacts />

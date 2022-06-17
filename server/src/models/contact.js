@@ -4,7 +4,7 @@ const contactSchema = new Schema(
   {
     firstName: { type: String },
     lastName: { type: String },
-    phoneNumber: { type: Number },
+    phoneNumber: { type: String },
   },
   {
     timestamps: true,

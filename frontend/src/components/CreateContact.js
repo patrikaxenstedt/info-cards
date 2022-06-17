@@ -31,12 +31,12 @@ export default class CreateContact extends Component {
   render() {
     return (
       <div className="sm:max-w-l w-full p-3">
-        <h1 className="pt-12">Create new</h1>
-        <form class="pt-24" onSubmit={this.onSubmit}>
-          <div class="mb-4">
+        <h1 className="pt-8 uppercase">Create new</h1>
+        <form className="pt-16" onSubmit={this.onSubmit}>
+          <div className="mb-4">
             <input
               type="text"
-              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
+              className="form-cshadow appearance-none border w-full py-2 px-3 text-gray-700 focus:outline-none"
               placeholder="First name"
               onChange={this.onInputChange}
               name="firstName"
@@ -45,10 +45,10 @@ export default class CreateContact extends Component {
             />
           </div>
 
-          <div class="mb-4">
+          <div className="mb-4">
             <input
               type="text"
-              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
+              className="form-cshadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
               placeholder="Last name"
               onChange={this.onInputChange}
               name="lastName"
@@ -56,10 +56,11 @@ export default class CreateContact extends Component {
               required
             />
           </div>
-          <div class="mb-4">
+          <div className="mb-4">
             <input
               type="number"
-              className="form-cshadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
+              pattern="[789][0-9]{9}"
+              className="form-cshadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outlineontrol"
               placeholder="Phone number"
               name="phoneNumber"
               onChange={this.onInputChange}
@@ -68,7 +69,7 @@ export default class CreateContact extends Component {
             />
           </div>
           <div>
-            <button className="bg-[#04cccc] text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
+            <button className="bg-[#04cccc] text-white font-bold py-2 px-4 uppercase tracking-widest">
               Add new
             </button>
           </div>
