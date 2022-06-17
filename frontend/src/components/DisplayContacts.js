@@ -22,17 +22,11 @@ export default class DisplayContacts extends Component {
     this.getContacts();
   };
 
-  /*   numberWithSpaces = async (value, pattern) => {
-    let i = 0,
-      phoneNumber = value.toString();
-    return pattern.replace(/#/g, (_) => phoneNumber[i++]);
-  }; */
-
   render() {
     return (
       <div className="sm:max-w-l w-full p-3">
         <h1 className="pt-8 uppercase">List</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 pt-16">
           {this.state.contacts && this.state.contacts.length > 0 ? (
             this.state.contacts
               .sort((a, b) => a.firstName.localeCompare(b.firstName))
@@ -45,23 +39,23 @@ export default class DisplayContacts extends Component {
                   >
                     X
                   </button>
-                  <div className="p-12 bg-white border border-gray-200 shadow-sm">
-                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-700 dark:text-gray-400">
+                  <div className="p-12 bg-white border border-gray-100 shadow-md">
+                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-400">
                       First name
                     </h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    <p className="mb-3 font-normal text-gray-400">
                       {contact.firstName}
                     </p>
-                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-700 dark:text-gray-400">
+                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-400">
                       Last name
                     </h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    <p className="mb-3 font-normal text-gray-400">
                       {contact.lastName}
                     </p>
-                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-700 dark:text-gray-400">
+                    <h5 className="text-sm font-bold uppercase tracking-tight text-gray-400">
                       Phone number
                     </h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    <p className="font-normal text-gray-400">
                       {contact.phoneNumber.replace(
                         /(\d{3})(\d{3})(\d{2})(\d{2})/,
                         "$1 $2 $3 $4"
@@ -71,7 +65,7 @@ export default class DisplayContacts extends Component {
                 </div>
               ))
           ) : (
-            <h1>The contact list is empty.</h1>
+            <h1 className="italic text-gray-400">The contact list is empty.</h1>
           )}
         </div>
       </div>

@@ -30,7 +30,7 @@ export default class CreateContact extends Component {
 
   render() {
     return (
-      <div className="sm:max-w-l w-full p-3">
+      <div className="sm:max-w-l w-full p-4">
         <h1 className="pt-8 uppercase">Create new</h1>
         <form className="pt-16" onSubmit={this.onSubmit}>
           <div className="mb-4">
@@ -44,7 +44,6 @@ export default class CreateContact extends Component {
               required
             />
           </div>
-
           <div className="mb-4">
             <input
               type="text"
