@@ -1,3 +1,4 @@
+// Remember to create your .env-file.
 require("dotenv").config();
 
 const app = require("./app");
